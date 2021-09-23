@@ -31,7 +31,12 @@ def lista_ganadores(total):
     else:
         return "El número dado excede al total de usuarios"
 
+def listar_ganadores(ganadores):
+    i = 1
+    for ganador in ganadores:
+        print("{pos} - {ganador}".format(ganador=ganador, pos=i))
+        i+=1
 
 if __name__ == "__main__":
     ganadores = int(input("Cuantos Ganadores habrá: "))
-    print(lista_ganadores(ganadores))
+    listar_ganadores(lista_ganadores(ganadores))
